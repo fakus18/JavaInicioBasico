@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.tiendacomparar;
+package com.mycompany.tiendacomaparar;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -36,10 +36,10 @@ public class EntradaSalida {
         return p;
     }
 
-    public static void mostrarProductos(ArrayList<Producto> lista_productos) {
+    public static void mostrarProductos(ArrayList<Producto> lista_final) {
         
                     
-        for (Producto pro : lista_productos) {
+        for (Producto pro : lista_final) {
         System.out.println(pro);
         }
     }
@@ -47,4 +47,3 @@ public class EntradaSalida {
     
     
 }
-

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.tiendacomparar;
+package com.mycompany.tiendacomaparar;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -15,7 +15,7 @@ import java.util.Collections;
 public class ClasePrincipal {
 
     public static void main(String[] args) {
-        String ruta = "C:\\TextosNetbeans\\Productos.csv";
+        String ruta = "C:\\LUIS\\PROGRAMACION\\Productos.csv";
         //GrabarProductos.abrirAlEntrar(ruta);
         int menu = EntradaSalida.mostrarMenu();
         Producto p=null;
@@ -24,7 +24,7 @@ public class ClasePrincipal {
             switch (menu) {
                 case 1:
                     p=EntradaSalida.pedirProducto();
-                    GrabarProductos.grabarLinea(p);
+                    GrabarProductos.grabarLinea(p, ruta);
                     break;
 
                 case 2:
@@ -39,3 +39,4 @@ public class ClasePrincipal {
 
     }
 }
+

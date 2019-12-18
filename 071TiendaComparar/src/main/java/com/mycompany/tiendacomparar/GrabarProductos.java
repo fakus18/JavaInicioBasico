@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.tiendacomparar;
+package com.mycompany.tiendacomaparar;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -21,11 +21,11 @@ import java.util.logging.Logger;
  */
 class GrabarProductos {
 
-    public static void grabarLinea(Producto p) {
+    public static void grabarLinea(Producto p, String ruta) {
         String linea = p.getNombre() + ";" + p.getPrecio() + "\n";
 
         try {
-            FileWriter fw = new FileWriter("C:\\TextosNetbeans\\Productos.csv", true);
+            FileWriter fw = new FileWriter(ruta , true);
             fw.write(linea);
             fw.close();
         } catch (IOException ex) {
@@ -58,27 +58,5 @@ class GrabarProductos {
         return lista_productos;
     }
 
-    /*public static Producto devolverDatos()
-    {
-        Producto datos_cc=null;
-        try {
-            String ruta="C:\\TextosNetbeans\\Productos.csv";
-            FileReader fr=new FileReader(ruta);
-            BufferedReader br=new BufferedReader(fr);
-            String linea=br.readLine();
-            while(linea!=null)
-            {
-                String[] datos=linea.split(",");
-                datos_cc=new Producto (linea, 0);
-                linea=br.readLine();
-            }
-            
-            
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(LeerFichero.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(LeerFichero.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return datos_cc;
-    } */
+   
 }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.tiendacomparar;
+package com.mycompany.tiendacomaparar;
 
 /**
  *
@@ -46,9 +46,9 @@ public class Producto implements Comparable<Producto> {
     @Override
     public int compareTo(Producto p) {
         if (this.precio > p.precio) {
-            return -1;
-        } else if (this.precio < p.precio) {
             return 1;
+        } else if (this.precio < p.precio) {
+            return -1;
         }
         return 0;
     }
